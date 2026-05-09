@@ -158,7 +158,7 @@ function handleProfilePage() {
         const users = getUsers().filter(u => u.email.toLowerCase() !== user.email.toLowerCase());
         saveUsers(users);
         clearCurrentUser();
-        window.location.href = 'signin.html';
+        window.location.href = 'sign-in.html';
       }
     });
   }
@@ -174,7 +174,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  handleProfilePage();
+  if (window.location.pathname.includes('profile.html')) {
+    handleProfilePage();
+  }
 });
 
 function normalizeWeaponAssetPath(assetPath) {

@@ -73,11 +73,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 1. Lấy email người dùng từ session
     const currentEmail = localStorage.getItem(SESSION_KEY);
-    if (!currentEmail) return;
 
     // 2. Lấy data người dùng từ danh sách users
     const users = JSON.parse(localStorage.getItem(USERS_KEY) || '[]');
-    const user = users.find(u => u.email.toLowerCase() === currentEmail.toLowerCase());
+    const user = currentEmail ? users.find(u => u.email.toLowerCase() === currentEmail.toLowerCase()) : null;
 
     if (user) {
         // Cập nhật Username ở Header (ID: Username)
@@ -97,5 +96,88 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.warn("Link ảnh lỗi, đã chuyển về ảnh mặc định.");
             };
         }
+    }
+
+    const loginForm = document.getElementById('login-form');
+    const signupForm = document.getElementById('signup-form');
+    const loginMessage = document.getElementById('login-message');
+    const signupMessage = document.getElementById('signup-message');
+
+    function getUsers() {
+        const raw = localStorage.getItem('favgames_users');
+        return raw ? JSON.parse(raw) : [];
+    }
+
+    function saveUsers(users) {
+        localStorage.setItem('favgames_users', JSON.stringify(users));
+    }
+
+    function showMessage(element, text, isError = true) {
+        if (!element) return;
+        element.textContent = text;
+        element.style.color = isError ? '#d43131' : '#1b8f4e';
+    }
+
+    if (loginForm) {
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            const users = getUsers();
+            const user = users.find(u => u.email.toLowerCase() === email.toLowerCase());
+
+            if (!user) {
+                showMessage(loginMessage, 'Email không tồn tại. Vui lòng đăng ký trước.', true);
+                return;
+            }
+
+            if (user.password !== password) {
+                showMessage(loginMessage, 'Sai mật khẩu. Vui lòng thử lại.', true);
+                return;
+            }
+
+            localStorage.setItem('favgames_current_user', user.email);
+            showMessage(loginMessage, 'Đăng nhập thành công!', false);
+
+            const redirect = window.location.pathname.includes('/access/html/') ? '../../index.html' : 'index.html';
+            window.location.href = redirect;
+        });
+    }
+
+    if (signupForm) {
+        signupForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const users = getUsers();
+
+            if (password !== confirmPassword) {
+                showMessage(signupMessage, 'Mật khẩu xác nhận không khớp.', true);
+                return;
+            }
+
+            if (users.some(u => u.email.toLowerCase() === email.toLowerCase())) {
+                showMessage(signupMessage, 'Email này đã được sử dụng.', true);
+                return;
+            }
+
+            users.push({
+                name,
+                email,
+                password,
+                joinedAt: new Date().toLocaleDateString(),
+                avatar: '../img/ryou yamada avatar.jpg',
+            });
+            saveUsers(users);
+            showMessage(signupMessage, 'Đăng ký thành công! Chuyển sang trang đăng nhập...', false);
+
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 800);
+        });
     }
 });

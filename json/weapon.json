@@ -1,0 +1,458 @@
+[
+    {
+        "name": "Piercer Revolver",
+        "terminal_info": "The Piercer Revolver is the blue variant of the Revolver, first acquired in 0-1: INTO THE FIRE. Its alternate fire charges up a powerful shot that deals high damage and pierces through enemies and deals increased damage to limbs and heads.",
+        "weapon_type": "Revolver",
+        "img": "../img/Piercer Revolver.webp",
+        "primary_fire": {
+            "damage": "1\n1.5 (Trúng chi)\n2 (Trúng đầu)",
+            "cooldown": "0.5 giây"
+        },
+        "alternate_fire": {
+            "damage": "1 [x3]\n1.75 [x3] (Trúng chi)\n2.5 [x3] (Trúng đầu)",
+            "cooldown": "2.5 giây"
+        },
+        "damage_modifiers": {
+            "Revolvers": "Revolvers",
+            "The Corpse of King Minos' Hands": "150%",
+            "Stalker": "150%",
+            "V2": "60%",
+            "V2 (2nd)": "60%",
+            "Providence": "150%"
+        },
+        "obtained_in": "0-1: Into the Fire"
+    },
+    {
+        "name": "Marksman Revolver",
+        "terminal_info": "The Marksman Revolver is the green variant of the Revolver, obtained in the Terminal Shop for 7,500P. Its alternate fire throws a coin which can be shot by any hitscan to cause it to lock onto the nearest enemy.",
+        "weapon_type": "Revolver",
+        "img": "../img/Marksman Revolver.webp",
+        "primary_fire": {
+            "damage": "1\n1.5 (Trúng chi)\n2 (Trúng đầu)",
+            "cooldown": "0.5 giây"
+        },
+        "alternate_fire": {
+            "damage": "2 (Đỡ đạn xu)\n4 (Đỡ đạn xu trúng đầu)",
+            "cooldown": "4 giây (mỗi xu)"
+        },
+        "damage_modifiers": {
+            "Revolvers": "Revolvers",
+            "The Corpse of King Minos' Hands": "150%",
+            "Stalker": "150%",
+            "V2": "60%",
+            "V2 (2nd)": "60%",
+            "Providence": "150%"
+        },
+        "obtained_in": "Cửa hàng Terminal\n7,500P"
+    },
+    {
+        "name": "Sharpshooter Revolver",
+        "terminal_info": "The Sharpshooter Revolver is the red variant of the Revolver, purchased in the Terminal Shop for 25,000P. Its alternate fire spins the gun, preparing a shot which pierces enemies and ricochets off walls, as well as detonating midair projectiles.",
+        "weapon_type": "Revolver",
+        "img": "../img/Sharpshooter Revolver.webp",
+        "primary_fire": {
+            "damage": "1\n1.5 (Trúng chi)\n2 (Trúng đầu)",
+            "cooldown": "0.5 giây"
+        },
+        "alternate_fire": {
+            "damage": "1-3 (1 x 1-3 hitscans)",
+            "cooldown": "6.6 giây (mỗi sạc)"
+        },
+        "damage_modifiers": {
+            "Revolvers": "Revolvers",
+            "The Corpse of King Minos' Hands": "150%",
+            "Stalker": "150%",
+            "V2": "60%",
+            "V2 (2nd)": "60%",
+            "Providence": "150%"
+        },
+        "obtained_in": "Cửa hàng Terminal\n25,000P"
+    },
+    {
+        "name": "Core Eject Shotgun",
+        "terminal_info": "Press Alt Fire to overheat and launch the shotgun's cores. Hold to charge distance. Explodes on impact.",
+        "weapon_type": "Shotgun",
+        "img": "../img/Core Eject.webp",
+        "primary_fire": {
+            "damage": "0.25 [x12]",
+            "cooldown": "1.25 seconds"
+        },
+        "alternate_fire": {
+            "damage": "3.5",
+            "cooldown": "2 seconds"
+        },
+        "damage_modifiers": {
+            "Shotgun Pellets": "Shotgun Pellets",
+            "Swordsmachine": "150%",
+            "Swordsmachine \"Agony\"": "150%",
+            "Swordsmachine \"Tundra\"": "150%",
+            "Malicious Face": "233%",
+            "Shotgun Parries": "Shotgun Parries",
+            "Filth": "200%",
+            "Stray": "200%",
+            "Schism": "200%",
+            "Soldier": "200%",
+            "The Corpse of King Minos": "650%",
+            "Ferryman": "150%",
+            "Swordsmachine": "225%",
+            "Swordsmachine \"Agony\"": "225%",
+            "Swordsmachine \"Tundra\"": "225%",
+            "Mindflayer": "150%",
+            "Sentry": "150%",
+            "Minos Prime": "150%",
+            "Sisyphus Prime": "150%",
+            "Mannequin": "150%",
+            "Core Explosions": "Core Explosions",
+            "Filth": "50%",
+            "Soldier": "25%",
+            "Streetcleaner": "50%",
+            "Swordsmachine \"Tundra\"": "175%",
+            "Malicious Face": "0%",
+            "Mannequin": "50%"
+        },
+        "obtained_in": "0-2: The Meatgrinder\n0-3: Double Down"
+    },
+    {
+        "name": "Pump Charge Shotgun",
+        "terminal_info": "Press Alt Fire to pump your shotgun, increasing the power and decreasing the accuracy of your next shot. Too many pumps will cause an explosion when fired.",
+        "weapon_type": "Shotgun",
+        "img": "../img/Pump-Charge.webp",
+        "primary_fire": {
+            "damage": "0.25 [x10]",
+            "cooldown": "0.9 seconds"
+        },
+        "alternate_fire": {
+            "damage": "0.25 [x16] (One Pump)\n0.25 [x24] (Two Pumps)\n10 (Explosion)",
+            "cooldown": "0.4 seconds"
+        },
+        "damage_modifiers": {
+            "Shotgun Pellets": "Shotgun Pellets",
+            "Swordsmachine": "150%",
+            "Swordsmachine \"Agony\"": "150%",
+            "Swordsmachine \"Tundra\"": "150%",
+            "Malicious Face": "233%",
+            "Shotgun Parries": "Shotgun Parries",
+            "Filth": "200%",
+            "Stray": "200%",
+            "Schism": "200%",
+            "Soldier": "200%",
+            "The Corpse of King Minos": "650%",
+            "Ferryman": "150%",
+            "Swordsmachine": "225%",
+            "Swordsmachine \"Agony\"": "225%",
+            "Swordsmachine \"Tundra\"": "225%",
+            "Mindflayer": "150%",
+            "Sentry": "150%",
+            "Minos Prime": "150%",
+            "Sisyphus Prime": "150%",
+            "Mannequin": "150%",
+            "Core Explosions": "Core Explosions",
+            "Filth": "50%",
+            "Soldier": "25%",
+            "Streetcleaner": "50%",
+            "Swordsmachine \"Tundra\"": "175%",
+            "Malicious Face": "0%",
+            "Mannequin": "50%"
+        },
+        "obtained_in": "Terminal Shop\n12,500P"
+    },
+    {
+        "name": "Sawed-On Shotgun",
+        "terminal_info": "Hold Alt Fire to rev chainsaw. Release to launch, piercing enemies and returning back. Can be punched to keep active.",
+        "weapon_type": "Shotgun",
+        "img": "../img/Sawed-On.webp",
+        "primary_fire": {
+            "damage": "0.25 [x12]",
+            "cooldown": "1.25 seconds"
+        },
+        "alternate_fire": {
+            "damage": "0.25 (Revved; every 0.05 seconds)\n1.5 [x3] (Launched; per enemy contact. Limit increased to x4 when untethered)",
+            "cooldown": "0.4 seconds"
+        },
+        "damage_modifiers": {
+            "Shotgun Pellets": "Shotgun Pellets",
+            "Swordsmachine": "150%",
+            "Swordsmachine \"Agony\"": "150%",
+            "Swordsmachine \"Tundra\"": "150%",
+            "Malicious Face": "233%",
+            "Shotgun Parries": "Shotgun Parries",
+            "Filth": "200%",
+            "Stray": "200%",
+            "Schism": "200%",
+            "Soldier": "200%",
+            "The Corpse of King Minos": "650%",
+            "Ferryman": "150%",
+            "Swordsmachine": "225%",
+            "Swordsmachine \"Agony\"": "225%",
+            "Swordsmachine \"Tundra\"": "225%",
+            "Mindflayer": "150%",
+            "Sentry": "150%",
+            "Minos Prime": "150%",
+            "Sisyphus Prime": "150%",
+            "Mannequin": "150%"
+        },
+        "obtained_in": "Terminal Shop\n25,000P"
+    },
+    {
+        "name": "Attractor Nailgun",
+        "terminal_info": "Alt fire to shoot a magnet that pulls all nearby nails towards it. Magnets stick to surfaces and enemies and can be broken with hitscan weapons.",
+        "weapon_type": "Nailgun",
+        "img": "../img/Attractor.webp",
+        "primary_fire": {
+            "damage": "0.205",
+            "duration": "0.04 seconds (25 nails per second)",
+            "cooldown": "0.2 seconds per nail"
+        },
+        "alternate_fire": {
+            "duration": "12 seconds (Per Magnet)",
+            "cooldown": "0.35 seconds"
+        },
+        "damage_modifiers": {
+            "Nails": "Nails",
+            "Mirror Reaper": "50%",
+            "Malicious Face": "150%",
+            "Virtue": "125%",
+            "Gabriel, Judge Of Hell": "125%",
+            "Gabriel, Apostate Of Hate": "125%",
+            "Providence": "200%",
+            "Power": "125%",
+            "Mysterious Druid Knight (& Owl)": "50%",
+            "Flesh Prison": "50%",
+            "Flesh Panopticon": "50%",
+            "Silver Nails": "Silver Nails",
+            "Filth": "200%",
+            "Stray": "200%",
+            "Schism": "150%",
+            "Soldier": "150%",
+            "Stalker": "150%",
+            "Virtue": "125%",
+            "Providence": "200%",
+            "Power": "125%"
+        },
+        "obtained_in": "1-1: HEART OF THE SUNRISE\n1-2: THE BURNING WORLD"
+    },
+    {
+        "name": "Overheat Nailgun",
+        "terminal_info": "Alt fire while shooting to overheat for a quick burst of damage at the cost of a heatsink. Heatsinks recharge while not firing.",
+        "weapon_type": "Nailgun",
+        "img": "../img/Overheat.webp",
+        "primary_fire": {
+            "damage": "0.185",
+            "duration": "0.04 seconds (Low Heat, 25 nails per second)\n0.08 seconds (High Heat, 12.5 nails per second)\n0.125 seconds (Depleted, 8 nails per second)"
+        },
+        "alternate_fire": {
+            "damage": "0.185",
+            "duration": "0.016 seconds per nail (62.5 nails per second)",
+            "cooldown": "8 seconds per charge"
+        },
+        "damage_modifiers": {
+            "Nails": "Nails",
+            "Mirror Reaper": "50%",
+            "Malicious Face": "150%",
+            "Virtue": "125%",
+            "Gabriel, Judge Of Hell": "125%",
+            "Gabriel, Apostate Of Hate": "125%",
+            "Providence": "200%",
+            "Power": "125%",
+            "Mysterious Druid Knight (& Owl)": "50%",
+            "Flesh Prison": "50%",
+            "Flesh Panopticon": "50%",
+            "Fire": "Fire",
+            "Schism": "50%",
+            "Insurrectionist": "200%",
+            "Mirror Reaper": "33%",
+            "Swordsmachine \"Tundra\"": "175%"
+        },
+        "obtained_in": "Terminal Shop\n25,000P"
+    },
+    {
+        "name": "JumpStart Nailgun",
+        "terminal_info": "Press Alt Fire to attach a cable that slowly charges a powerful electric shock. Attached cables persist when switching weapons.",
+        "weapon_type": "Nailgun",
+        "img": "../img/JumpStart.webp",
+        "primary_fire": {
+            "damage": "0.185",
+            "duration": "0.08 seconds (Cable untethered, 12.5 nails per second)\n0.04 seconds (Cable tethered, 25 nails per second)"
+        },
+        "alternate_fire": {
+            "damage": "10 (increases by 0.5 for every saw hitting the enemy) (Initial Shock)\n2 damage (1-30 nails, increases by 0.06 for every following nail up to 6 damage at 90 nails) (Conductor Aftershock)",
+            "duration": "5 seconds",
+            "cooldown": "5 seconds"
+        },
+        "damage_modifiers": {
+            "Nails": "Nails",
+            "Mirror Reaper": "50%",
+            "Malicious Face": "150%",
+            "Virtue": "125%",
+            "Gabriel, Judge Of Hell": "125%",
+            "Gabriel, Apostate Of Hate": "125%",
+            "Providence": "200%",
+            "Power": "125%",
+            "Mysterious Druid Knight (& Owl)": "50%",
+            "Flesh Prison": "50%",
+            "Flesh Panopticon": "50%",
+            "Electricity": "Electricity",
+            "Swordsmachine \"Agony\"": "175%",
+            "Virtue": "150%",
+            "Providence": "150%",
+            "Flesh Prison": "50%",
+            "Flesh Panopticon": "50%"
+        },
+        "obtained_in": "Terminal Shop\n35,000P"
+    },
+    {
+        "name": "Electric Railcannon",
+        "terminal_info": "A powerful instant piercing shot. Pierces through all enemies. Pay attention to your positioning to maximize destruction. Don't use in water.",
+        "weapon_type": "Railcannon",
+        "img": "../img/Electric.webp",
+        "primary_fire": {
+            "damage": "8 (2*4)",
+            "cooldown": "16 seconds"
+        },
+        "alternate_fire": null,
+        "damage_modifiers": {
+            "Railcannon Hitscan": "Railcannon Hitscan",
+            "Virtue": "150%",
+            "Providence": "150%",
+            "Flesh Prison": "50%",
+            "Flesh Panopticon": "50%",
+            "Electricity": "Electricity",
+            "Swordsmachine \"Agony\"": "175%",
+            "Virtue": "150%",
+            "Providence": "150%",
+            "Flesh Prison": "50%",
+            "Flesh Panopticon": "50%"
+        },
+        "obtained_in": "2-2: Death at 20,000 Volts"
+    },
+    {
+        "name": "Screwdriver Railcannon",
+        "terminal_info": "Fires a powerful drill that sticks to an enemy and deals damage over time. The drill causes enemies to bleed continuously with extra healing range.",
+        "weapon_type": "Railcannon",
+        "img": "../img/Screwdriver.webp",
+        "primary_fire": {
+            "damage": "3 (Drill Impact)\n0.0625 [x116] (Continuous)",
+            "duration": "~7.5 seconds",
+            "cooldown": "16 seconds"
+        },
+        "alternate_fire": null,
+        "damage_modifiers": {},
+        "obtained_in": "Terminal Shop\n100,000P"
+    },
+    {
+        "name": "Malicious Railcannon",
+        "terminal_info": "Fires an instant beam that causes a large explosion on impact, similar to a certain familiar face. Wipes out groups of weak enemies with ease.",
+        "weapon_type": "Railcannon",
+        "img": "../img/Malicious.webp",
+        "primary_fire": {
+            "damage": "2 (Hitscan)\n6.25 (Explosion)",
+            "cooldown": "16 seconds"
+        },
+        "alternate_fire": null,
+        "damage_modifiers": {
+            "Railcannon Hitscan": "Railcannon Hitscan",
+            "Virtue": "150%",
+            "Providence": "150%",
+            "Flesh Prison": "50%",
+            "Flesh Panopticon": "50%",
+            "Core Explosions": "Core Explosions",
+            "Filth": "50%",
+            "Soldier": "25%",
+            "Streetcleaner": "50%",
+            "Malicious Face": "0%",
+            "Swordsmachine \"Tundra\"": "175%",
+            "Mannequin": "50%"
+        },
+        "obtained_in": "Terminal Shop\n100,000P"
+    },
+    {
+        "name": "Freezeframe Rocket Launcher",
+        "terminal_info": "Press Alt Fire to freeze rockets. Frozen rockets have a larger blast radius and will stay frozen even when switching weapons.",
+        "weapon_type": "Rocket Launcher",
+        "img": "../img/Freezeframe.webp",
+        "primary_fire": {
+            "damage": "3.5\n7 (Airshot Explosion)",
+            "cooldown": "1 seconds"
+        },
+        "alternate_fire": {
+            "duration": "5 seconds",
+            "cooldown": "10 seconds"
+        },
+        "damage_modifiers": {
+            "Rockets": "Rockets",
+            "Cerberus": "150%",
+            "Providence": "200%",
+            "Explosions": "Explosions",
+            "Filth": "50%",
+            "Soldier": "25%",
+            "Streetcleaner": "50%",
+            "Swordsmachine \"Tundra\"": "175%",
+            "Malicious Face": "0%",
+            "Mannequin": "50%"
+        },
+        "obtained_in": "5-3: Ship of Fools"
+    },
+    {
+        "name": "S.R.S. Cannon Rocket Launcher",
+        "terminal_info": "Press Alt Fire to launch cannonball. Hold to charge distance. Nobody knows what S.R.S. stands for.",
+        "weapon_type": "Rocket Launcher",
+        "img": "../img/S.R.S Cannon.webp",
+        "primary_fire": {
+            "damage": "3.5\n7 (Airshot Explosion)",
+            "cooldown": "1 seconds"
+        },
+        "alternate_fire": {
+            "damage": "2 (Uncharged)\n5 (25%+ Charged)\n7 (Parry)\n5 (Explosion)",
+            "cooldown": "8 seconds"
+        },
+        "damage_modifiers": {
+            "Rockets": "Rockets",
+            "Cerberus": "150%",
+            "Providence": "200%",
+            "Explosions": "Explosions",
+            "Filth": "50%",
+            "Soldier": "25%",
+            "Streetcleaner": "50%",
+            "Swordsmachine \"Tundra\"": "175%",
+            "Malicious Face": "0%",
+            "Mannequin": "50%",
+            "Cannonball": "Cannonball",
+            "Cerberus": "200%",
+            "Providence": "1000%"
+        },
+        "obtained_in": "Terminal Shop\n75,000P"
+    },
+    {
+        "name": "Firestarter Rocket Launcher",
+        "terminal_info": "Hold Alt Fire to spray gasoline, making non-flammable enemies flammable. Can also be sprayed on the environment to create walls of fire.",
+        "weapon_type": "Rocket Launcher",
+        "img": "../img/Firestarter.webp",
+        "primary_fire": {
+            "damage": "3.5\n7 (Airshot Explosion)",
+            "cooldown": "1 seconds"
+        },
+        "alternate_fire": {
+            "damage": "1 (On Ground) (Per Burn Tick)\n0.5 (On Enemy) (Per Burn Tick)",
+            "duration": "3 seconds",
+            "cooldown": "8 seconds"
+        },
+        "damage_modifiers": {
+            "Rockets": "Rockets",
+            "Cerberus": "150%",
+            "Providence": "200%",
+            "Explosions": "Explosions",
+            "Filth": "50%",
+            "Soldier": "25%",
+            "Streetcleaner": "50%",
+            "Swordsmachine \"Tundra\"": "175%",
+            "Malicious Face": "0%",
+            "Mannequin": "50%",
+            "Fire": "Fire",
+            "Schism": "50%",
+            "Insurrectionist": "200%",
+            "Mirror Reaper": "33%",
+            "Swordsmachine \"Tundra\"": "175%"
+        },
+        "obtained_in": "Terminal Shop\n75,000P"
+    }
+]

@@ -116,7 +116,7 @@
         "name": "Pump Charge Shotgun",
         "terminal_info": "Press Alt Fire to pump your shotgun, increasing the power and decreasing the accuracy of your next shot. Too many pumps will cause an explosion when fired.",
         "weapon_type": "Shotgun",
-        "img": "../img/Pump-Charge.webp",
+        "img": "../img/Pump-charge.webp",
         "primary_fire": {
             "damage": "0.25 [x10]",
             "cooldown": "0.9 seconds"
@@ -160,7 +160,7 @@
         "name": "Sawed-On Shotgun",
         "terminal_info": "Hold Alt Fire to rev chainsaw. Release to launch, piercing enemies and returning back. Can be punched to keep active.",
         "weapon_type": "Shotgun",
-        "img": "../img/Sawed-On.webp",
+        "img": "../img/Sawed-on.webp",
         "primary_fire": {
             "damage": "0.25 [x12]",
             "cooldown": "1.25 seconds"
@@ -269,7 +269,7 @@
         "name": "JumpStart Nailgun",
         "terminal_info": "Press Alt Fire to attach a cable that slowly charges a powerful electric shock. Attached cables persist when switching weapons.",
         "weapon_type": "Nailgun",
-        "img": "../img/JumpStart.webp",
+        "img": "../img/Jumpstart.webp",
         "primary_fire": {
             "damage": "0.185",
             "duration": "0.08 seconds (Cable untethered, 12.5 nails per second)\n0.04 seconds (Cable tethered, 25 nails per second)"

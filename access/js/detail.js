@@ -106,13 +106,75 @@ function renderArray(containerId, value) {
 
 function normalizeAssetPath(assetPath) {
     if (!assetPath) return '';
-    if (assetPath.startsWith('http://') || assetPath.startsWith('https://') || assetPath.startsWith('/')) {
-        return assetPath;
+    const normalized = assetPath.replace(/\\/g, '/').trim();
+    if (normalized.startsWith('http://') || normalized.startsWith('https://') || normalized.startsWith('//')) {
+        return normalized;
     }
-    if (assetPath.startsWith('./') || assetPath.startsWith('../')) {
-        return assetPath;
+    const isHtmlSubpage = window.location.pathname.includes('/access/html/');
+    if (isHtmlSubpage) {
+        if (normalized.startsWith('access/')) {
+            return `../${normalized.slice('access/'.length)}`;
+        }
+        if (normalized.startsWith('./') || normalized.startsWith('../')) {
+            return normalized;
+        }
+        return `../${normalized}`;
     }
-    return `/${assetPath.replace(/^\/+/, '')}`;
+    if (normalized.startsWith('../img/') || normalized.startsWith('./img/')) {
+        return `access/${normalized.replace(/^([\.\/]+|\.\.)+/, '')}`;
+    }
+    if (normalized.startsWith('img/')) {
+        return `access/${normalized}`;
+    }
+    return normalized;
+}
+
+function createAssetCandidates(assetPath) {
+    if (!assetPath) return [];
+    const cleaned = assetPath.replace(/\\/g, '/').trim();
+    const candidates = [];
+
+    const add = (path) => {
+        if (!path) return;
+        const normalized = normalizeAssetPath(path);
+        if (normalized && !candidates.includes(normalized)) {
+            candidates.push(normalized);
+        }
+    };
+
+    add(cleaned);
+    add(cleaned.replace(/^access\//, ''));
+    add(cleaned.replace(/^\.{1,2}\//, ''));
+
+    const basename = cleaned.split('/').pop();
+    if (basename) {
+        add(`../img/${basename}`);
+        add(`img/${basename}`);
+        add(`access/img/${basename}`);
+    }
+
+    return candidates;
+}
+
+function setImageWithFallback(imgEl, assetPath, fallback) {
+    if (!imgEl) return;
+    const paths = createAssetCandidates(assetPath);
+    if (fallback) {
+        paths.push(fallback);
+    }
+    let index = 0;
+    const tryNext = () => {
+        if (index >= paths.length) {
+            return;
+        }
+        imgEl.src = paths[index++] || '';
+    };
+    imgEl.onerror = () => {
+        if (index < paths.length) {
+            tryNext();
+        }
+    };
+    tryNext();
 }
 
 function renderEnemyDetail(enemyName, enemyData) {
@@ -142,16 +204,16 @@ function renderEnemyDetail(enemyName, enemyData) {
     gametagEl.textContent = `Weight: ${general['Trọng lượng'] ?? '--'}`;
     platformEl.textContent = `Rank: ${general['Hạng'] ?? '--'}`;
     descEl.textContent = general['Mô tả'] || (enemyData ? 'No description provided for this enemy.' : 'No enemy data is available for this selection.');
-    posterEl.src = image;
     posterEl.alt = `${enemyName} image`;
+    setImageWithFallback(posterEl, general.Img || icon || '../img/Poster.jpg', icon || '../img/Poster.jpg');
 
     if (trailerContainer) {
         trailerContainer.innerHTML = '';
         const detailImage = document.createElement('img');
-        detailImage.src = image;
         detailImage.alt = `${enemyName} detail image`;
         detailImage.style.width = '100%';
         detailImage.style.borderRadius = '18px';
+        setImageWithFallback(detailImage, general.Img || icon || '../img/Poster.jpg', icon || '../img/Poster.jpg');
         trailerContainer.appendChild(detailImage);
     }
 
@@ -220,16 +282,16 @@ function renderWeaponDetail(weaponName, weaponData) {
     gametagEl.textContent = `Obtained: ${weaponData.obtained_in || 'Unknown'}`;
     platformEl.textContent = weaponData.weapon_type || 'N/A';
     descEl.textContent = weaponData.terminal_info || 'No description available.';
-    posterEl.src = image;
     posterEl.alt = `${weaponName} image`;
+    setImageWithFallback(posterEl, weaponData.img || icon || '../img/Poster.jpg', icon || '../img/Poster.jpg');
 
     if (trailerContainer) {
         trailerContainer.innerHTML = '';
         const detailImage = document.createElement('img');
-        detailImage.src = image;
         detailImage.alt = `${weaponName} detail image`;
         detailImage.style.width = '100%';
         detailImage.style.borderRadius = '18px';
+        setImageWithFallback(detailImage, weaponData.img || icon || '../img/Poster.jpg', icon || '../img/Poster.jpg');
         trailerContainer.appendChild(detailImage);
     }
 

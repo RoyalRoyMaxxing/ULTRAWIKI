@@ -55,6 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (logo) {
     logo.addEventListener('click', () => {
       window.location.href = isHtmlSubpage ? '../../index.html' : 'index.html';
+      });
+  }
+
   if (account) {
     account.addEventListener('click', () => {
       const profileHref = isHtmlSubpage ? 'profile.html' : 'access/html/profile.html';

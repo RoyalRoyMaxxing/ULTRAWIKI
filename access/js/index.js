@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   navLinks.forEach(link => {
     const text = link.textContent.trim();
     if (text === 'Trang chủ') {
-      link.href = isHtmlSubpage ? '../index.html' : 'index.html';
+      link.href = isHtmlSubpage ? '../../index.html' : 'index.html';
     }
     if (text === 'Kẻ địch') {
       link.href = isHtmlSubpage ? 'enemy.html' : 'access/html/enemy.html';
@@ -54,10 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (logo) {
     logo.addEventListener('click', () => {
-      window.location.href = isHtmlSubpage ? '../index.html' : 'index.html';
-    });
-  }
-
+      window.location.href = isHtmlSubpage ? '../../index.html' : 'index.html';
   if (account) {
     account.addEventListener('click', () => {
       const profileHref = isHtmlSubpage ? 'profile.html' : 'access/html/profile.html';
